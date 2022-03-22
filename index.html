@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book App</title>
+    <link rel="stylesheet" href="./css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>Book application</h1>
+
+    <div class="container">
+    <table>
+        <thead>
+          <tr>
+              <th>Book name</th>
+              <th>Book Price</th>
+              <th>Book Picture</th>
+              <th>Change options</th>
+          </tr>
+        </thead>
+
+        <tbody id="all-books">
+          <tr data-id="1">
+            <td>Book 1</td>
+            <td>0.87</td>
+            <td><img src="images/book1.jpeg" alt="book"></td>
+            <td>
+              <button class="btn waves-effect waves-light edit-btn">Edit
+                <i class="material-icons right">edit</i>
+              </button>
+              <button class="btn waves-effect waves-light delete-btn" >Delete
+                <i class="material-icons right">delete</i>
+              </button>
+            </td>
+          </tr>
+          <tr data-id="2">
+            <td>Book 2</td>
+            <td>3.76</td>
+            <td><img src="images/book2.jpeg" alt="book"></td>
+            <td>
+                <button class="btn waves-effect waves-light edit-btn">Edit
+                    <i class="material-icons right">edit</i>
+                  </button>
+                  <button class="btn waves-effect waves-light delete-btn" >Delete
+                    <i class="material-icons right">delete</i>
+                  </button>
+            </td>
+          </tr>
+          <tr data-id="3">
+            <td>Book 3</td>
+            <td>7.00</td>
+            <td><img src="images/book3.jpeg" alt="book"></td>
+            <td>
+                <button class="btn waves-effect waves-light edit-btn">Edit
+                    <i class="material-icons right">edit</i>
+                  </button>
+                  <button class="btn waves-effect waves-light delete-btn" >Delete
+                    <i class="material-icons right">delete</i>
+                  </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button class="btn waves-effect waves-light" id="add-book">Add book
+        <i class="material-icons right">add</i>
+      </button>
+    </div>
+
+
+    <div class="row">
+      <div class="col s12">
+          <div id="modal1" class="modal">
+              <div class="modal-content">
+              <h4>Add new book</h4>
+             
+                <!---->
+                <div class="row">
+                  <form class="col s12">
+                    <div class="row">
+                      <div class="input-field col s6">
+                        <input placeholder="Book name" id="book_name" type="text" name="bookName" class="validate">
+                      </div>
+                      <div class="input-field col s6">
+                        <input id="book_price" type="text" class="validate" name="bookPrice" placeholder="Book price">
+                      </div>
+                    </div>
+                    
+                    
+                    <div class="row">
+                      <div class="col s12">
+                        Select image:
+                        <div class="input-field inline">
+                          <select id="sel-img" name="selImg">
+                            <option value="" disabled selected>Select image</option>
+                            <option value="1">Image 1</option>
+                            <option value="2">Image 2</option>
+                            <option value="3">Image 3</option>
+                            <option value="4">Image 4</option>
+                            <option value="5">Image 5</option>
+                            <option value="6">Image 6</option>
+                            <option value="7">Image 7</option>
+                            <option value="8">Image 8</option>
+           
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                      
+                <!---->
+                <span class="material-icons right close-btn">close</span>
+
+              </div>
+              <div class="modal-footer">
+              <a href="#!" class="modal-add waves-effect waves-green btn-flat" >Add book</a>
+              </div>
+
+            
+          </div>
+
+
+
+
+
+
+          <div id="modal2" class="modal">
+            <div class="modal-content">
+            <h4>Edit book</h4>
+           
+              <!---->
+              <div class="row">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input placeholder="Book name" id="book_name_edit" type="text" name="bookNameEdit" class="validate">
+                    </div>
+                    <div class="input-field col s6">
+                      <input id="book_price_edit" type="text" class="validate" name="bookPriceEdit" placeholder="Book price">
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="row">
+                    <div class="col s12">
+                      Select image:
+                      <div class="input-field inline">
+                        <select id="sel-img-edit" name="selImgEdit">
+                          <option value="" disabled selected>Select image</option>
+                          <option value="1">Image 1</option>
+                          <option value="2">Image 2</option>
+                          <option value="3">Image 3</option>
+                          <option value="4">Image 4</option>
+                          <option value="5">Image 5</option>
+                          <option value="6">Image 6</option>
+                          <option value="7">Image 7</option>
+                          <option value="8">Image 8</option>
+         
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+                    
+              <!---->
+              <span class="material-icons right close-btn-edit">close</span>
+
+            </div>
+            <div class="modal-footer">
+            <a href="#!" class="modal-add-edit waves-effect waves-green btn-flat" >Edit book</a>
+            </div>
+
+          
+        </div>
+        </div>
+      </div>
+
+
+    <script src="./js/script.js"></script>
+    <script src="./js/crud_books.js"></script>
+</body>
+</html>

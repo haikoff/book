@@ -1,0 +1,25 @@
+#modal1, #modal2{
+    top: 200px;
+    z-index: 10;
+    /* display: block; */
+    box-shadow :0 124px 138px 113px rgb(0 0 0 / 54%), 0 19px 46px 18px rgb(0 0 0 / 42%), 0 11px 15px -7px rgb(0 0 0 / 20%)
+}
+
+#modal1.modal-show, #modal2.modal-show{
+    display: block;
+}
+
+select{
+    display: block;
+}
+
+#modal1 .modal-content, #modal2 .modal-content{
+    position: relative;
+}
+
+#modal1 .close-btn, #modal2 .close-btn-edit{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
